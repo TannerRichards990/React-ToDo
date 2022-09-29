@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { NavLink, Redirect, useParams } from '"react-router-dom"';
-import { UserContext } from '../context/userContext';
-import { authUser } from '../services/auth';
+import { NavLink, Redirect, useParams } from 'react-router-dom';
+import { UserContext } from '../../Context/useContext';
+import { authUser } from '../../services/Auth.js';
 
 export default function Auth() {
   const { type } = useParams();
@@ -37,7 +37,7 @@ export default function Auth() {
         <input type="email" name="email" id="email" />
         <label htmlFor="password">Password</label>
         <input type="password" name="password" id="password" />
-        <button type="submit">{type}Submit</button>
+        <button type="submit">{type}</button>
       </form>
     </div>
   );

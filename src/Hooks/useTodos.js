@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { getTodos} from '../services/todos'; 
+import { getTodos } from '../services/todos'; 
 
 
-export default function useTodos() {
+export function useTodos() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
@@ -14,5 +14,5 @@ export default function useTodos() {
     fetchTodos();
   }, []);
 
-  return todos;
+  return { todos, setTodos }; 
 }

@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  min-height: 75px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(160,212,164);
+  
+}
+
+header span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px;
+  
+  
+  
+}
+
+header button {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: rgb(160,212,164);
+  background-color: black;
+
+
+
+}

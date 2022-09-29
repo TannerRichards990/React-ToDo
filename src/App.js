@@ -1,9 +1,9 @@
 import './App.css';
-import Header from './components/Header';
-import Todos from './components/Todos';
-import Auth from './components/Auth';
+import Header from './Components/Header/Header';
+import Todos from './Components/Todos/Todos';
+import Auth from './Components/Auth/Auth';
 import { useState } from 'react';
-import { getUser } from '../services/auth';
+import { getUser } from './services/Auth.js';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 
