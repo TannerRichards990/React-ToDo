@@ -32,7 +32,7 @@ export default function Auth() {
           <NavLink to="/auth/sign-up">Sign Up</NavLink>
         </li>
       </ul>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={e => handleSubmit(e)}>
         <label htmlFor="email">Email</label>
         <input type="email" name="email" id="email" />
         <label htmlFor="password">Password</label>
