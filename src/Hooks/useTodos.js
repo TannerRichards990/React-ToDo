@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { getTodos } from '../services/todos'; 
 
 
-export function useTodos() {
+export default function useTodos() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
