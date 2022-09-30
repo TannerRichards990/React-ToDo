@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../../Context/useContext';
-import { useTodos } from '../../hooks/useTodos';
+import useTodos from '../../Hooks/useTodos';
 import { Redirect } from 'react-router-dom';
 import { createTodo, deleteTodo, updateTodo } from '../../services/todos';
 import './Todos.css';
