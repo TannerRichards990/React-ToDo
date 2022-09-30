@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import { NavLink, Redirect, useParams } from 'react-router-dom';
 import { UserContext } from '../../Context/useContext';
-import { authUser } from '../../services/Auth.js';
+import { authUser, getUser } from '../../services/Auth.js';
+import './Auth.css';
+
 
 export default function Auth() {
   const { type } = useParams();
@@ -13,8 +15,10 @@ export default function Auth() {
     const email = formData.get('email');
     const password = formData.get('password');
 
-    const response = await authUser(email, password, type);
-    setUser(response);
+    await authUser(email, password, type);
+
+    setUser(getUser());
+    
     e.target.reset();
   };
 
@@ -23,7 +27,7 @@ export default function Auth() {
   }
 
   return (
-    <div className="Authentication">
+    <div className="Auth">
       <ul>
         <li>
           <NavLink to="/auth/sign-in">Sign In</NavLink>
@@ -33,9 +37,10 @@ export default function Auth() {
         </li>
       </ul>
       <form onSubmit={e => handleSubmit(e)}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email: </label>
         <input type="email" name="email" id="email" />
-        <label htmlFor="password">Password</label>
+        
+        <label htmlFor="password">Password: </label>
         <input type="password" name="password" id="password" />
         <button type="submit">{type}</button>
       </form>

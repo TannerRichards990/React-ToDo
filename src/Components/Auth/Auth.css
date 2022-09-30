@@ -1,0 +1,41 @@
+.Auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.Auth button {
+  margin: 20px;
+  background-color: rgb(160,212,164);
+  color: black; 
+  font-size: 1.4rem;
+}
+
+input#email {
+  margin: 10px;
+  font-size: 1.4rem;
+}
+
+input#password{
+  margin: 10px;
+  font-size: 1.4rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+a.active {
+  font-size: 1.3rem;
+  color: rgb(160,212,164);
+
+}
+
+a {
+  font-size: 1.3rem;
+  color: rgb(160,212,164);
+}
+

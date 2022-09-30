@@ -40,7 +40,7 @@ export default function Todos() {
       <h1>Create a todo:</h1>
       <form onSubmit={e => handleCreate(e)}>
         <label>
-          Description:
+          Description: 
           <input type="text" name="description" />
         </label>
         <button type="submit">Create</button>
